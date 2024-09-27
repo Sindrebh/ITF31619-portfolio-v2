@@ -18,8 +18,7 @@ function App() {
       { name: "Python" },
       { name: "Java" },
       { name: "HTML/CSS" },
-      { name: "Git/Github" },
-      { name: "Finance and customer support tools: Microsoft Dynamics 365, Salesforce CRM" }
+      { name: "Git/Github" }
     ]
   };
   const [projects, setProjects] = useState([

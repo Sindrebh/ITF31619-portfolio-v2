@@ -11,7 +11,7 @@ type HeaderProps = {
 
 export default function Header(props: HeaderProps) {
   return (
-    <div>
+    <div className="header-container">
       <h1>{props.student.name}</h1>
       <p>{props.student.degree}</p>
       <p>{props.student.points} points</p>

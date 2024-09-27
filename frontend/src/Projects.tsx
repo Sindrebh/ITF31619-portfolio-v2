@@ -78,8 +78,8 @@ export default function Projects(props: React.PropsWithChildren<ProjectProps>) {
 
   return (
     <>
-      <section className="list">
-        <h3>Projects</h3>
+      <section className="project-list">
+        <h2>Projects</h2>
         {children}
         {Object.keys(groupedProjects).length > 0 ? (
           Object.keys(groupedProjects).map((category) => (

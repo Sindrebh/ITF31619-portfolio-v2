@@ -1,13 +1,9 @@
 /* 
-  Vi kan bruker @layer for å styre spesifisiteten
-  footer er "viktigere" enn button selv om det er senere i importen
-  spesifisiteten for footer er høyere. button er viktigere enn
-  base. Om vi ikke gjør dette vil knappen som er rød ikke bli hvit
-  da noe med layer blir mindre spesifikk enn noe uten.
+  Gjenbruker en del css fra:
+  https://github.com/mariuswallin/hiof-webapp-2024/tree/main/v2/frontend/src/styles
 */
 @layer base, button, footer;
 
-/* css variabler vi kan gjenbruke */
 :root {
   --theme: rgb(121, 63, 183);
   --green: rgb(25, 232, 168);

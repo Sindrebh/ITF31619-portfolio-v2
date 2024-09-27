@@ -35,42 +35,45 @@ export default function Contact(props: ContactProps) {
     };
 
     return (
-        <div>
-            <h2>Contact:</h2>
-            <button onClick={showAlert}>Show Email</button>
-            <h3>Send me a message</h3>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>
-                        Name:
-                        <input 
-                            type="text" 
-                            value={name} 
-                            onChange={(e) => setName(e.target.value)} 
-                            placeholder="Your Name" 
-                        />
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Message:
-                        <textarea 
-                            value={message} 
-                            onChange={(e) => setMessage(e.target.value)} 
-                            placeholder="Message" 
-                        />
-                    </label>
-                </div>
-                <button type="submit">Send</button>
-            </form>
+        <div className="contact-container">
+      <h2>Contact:</h2>
+      <button type="button" onClick={showAlert}>Show Email</button>
 
-            {submittedData && (
-                <div>
-                    <h3>Incoming messages:</h3>
-                    <pre>{JSON.stringify(submittedData, null, 2)}</pre>
-                </div>
-            )}
+      <h3>Send me a message here:</h3>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>
+            Name:
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your Name"
+            />
+          </label>
         </div>
+
+        <div>
+          <label>
+            Message:
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Message"
+            />
+          </label>
+        </div>
+
+        <button type="submit">Send</button>
+      </form>
+
+      {submittedData && (
+        <div className="submitted-data">
+          <h3>Incoming messages:</h3>
+          <pre>{JSON.stringify(submittedData, null, 2)}</pre>
+        </div>
+      )}
+    </div>
     );
 }
 

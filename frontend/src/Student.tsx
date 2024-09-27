@@ -17,25 +17,25 @@ type StudentProps = {
 
 export default function Student(props: StudentProps) {
   return (
-    <div>
-      <p>{props.name}</p>
-      <p>{props.degree}</p>
-      <p>{props.points}</p>
-      <p>{props.email}</p>
-      <h3>Experiences:</h3>
-      <ul>
-        {props.experiences.map((exp, index) => (
-          <li key={index}>{exp.name}</li>
-        ))}
-      </ul>
-      <h3>Projects:</h3>
-      <ul>
-        {props.projects.map((proj, index) => (
-          <li key={index}>{proj.name}</li>
-        ))}
-      </ul>
+    <div className="student-container">
+            <p>{props.name}</p>
+            <p>{props.degree}</p>
+            <p>{props.points}</p>
+            <p>{props.email}</p>
 
+            <h3>Experiences:</h3>
+            <ul>
+                {props.experiences.map((exp, index) => (
+                    <li key={index}>{exp.name}</li>
+                ))}
+            </ul>
 
-    </div>
+            <h3>Projects:</h3>
+            <ul>
+                {props.projects.map((proj, index) => (
+                    <li key={index}>{proj.name}</li>
+                ))}
+            </ul>
+      </div>
   );
 }
